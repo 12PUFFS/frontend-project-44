@@ -1,3 +1,7 @@
+#!/usr/bin/env node
+/*
+ * Description: Answer "yes" if the number is even, otherwise answer "no"
+ */
 
 import readlineSync from 'readline-sync';
 import getName from '../src/cli.js'; // Только для получения имени
