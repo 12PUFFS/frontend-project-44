@@ -1,5 +1,8 @@
 #!/usr/bin/env node
-import { sayHi, getName } from '../src/cli.js';
+// import  sayHi  from '../cli.js';
 
-sayHi();
-getName();
+import { getName } from '../src/index.js';
+
+import sayHi from '../src/cli.js';
+sayHi()
+getName()

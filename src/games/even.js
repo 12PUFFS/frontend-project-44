@@ -1,11 +1,14 @@
 import readlineSync from 'readline-sync';
-import { sayHi } from '../cli.js';
-import { getName } from '../cli.js';
+
+
+// import sayHi from '../cli';
+import { getName } from '../index.js';
 import { getRandomNumber } from '../index.js';
 
 const playEvenGame = () => {
+  // sayHi()
+  console.log("Welcome to the Brain Games!");
   const ROUNDS_COUNT = 3;
-  sayHi()
 
   const userName = getName();
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
