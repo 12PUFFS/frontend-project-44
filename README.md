@@ -7,4 +7,4 @@
 
 ## Демонстрация работы
 
-[![asciicast](https://asciinema.org/a/ABC123.svg)](https://asciinema.org/a/ABC123)
+(https://asciinema.org/a/ABC123)
