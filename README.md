@@ -8,3 +8,4 @@
 ## Демонстрация работы
 
 [![asciicast](https://asciinema.org/a/T9ST7uoYeyjidH5L3A9bLnyrM.svg)](https://asciinema.org/a/T9ST7uoYeyjidH5L3A9bLnyrM)
+[![asciicast](https://asciinema.org/a/1wNbVR5amddoVnSuVACjJvP8D.svg)](https://asciinema.org/a/1wNbVR5amddoVnSuVACjJvP8D)

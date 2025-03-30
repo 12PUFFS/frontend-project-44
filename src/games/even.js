@@ -1,20 +1,20 @@
 import readlineSync from 'readline-sync';
 
 
-// import sayHi from '../cli';
+import sayHi from '../cli.js';
 import { getName } from '../index.js';
 import { getRandomNumber } from '../index.js';
 
+sayHi()
 const playEvenGame = () => {
-  // sayHi()
-  console.log("Welcome to the Brain Games!");
+  
   const ROUNDS_COUNT = 3;
 
   const userName = getName();
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
 
   for (let correctAnswers = 0; correctAnswers < ROUNDS_COUNT;) {
-    const number = getRandomNumber(0, 100);
+    const number = getRandomNumber(1, 100);
     console.log(`Question: ${number}`);
     
     const userAnswer = readlineSync.question('Your answer: ').toLowerCase();
