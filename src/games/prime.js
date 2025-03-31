@@ -1,7 +1,7 @@
-import readlineSync from "readline-sync";
-import sayHi from "../cli.js";
-import { getName } from "../index.js";
-import { checkAnswer } from "../index.js";
+import readlineSync from 'readline-sync';
+import sayHi from '../cli.js';
+import { getName } from '../index.js';
+import { checkAnswer } from '../index.js';
 
 sayHi();
 const userName = getName();
@@ -22,13 +22,10 @@ const playPrimeGame = () => {
 
   while (correctAnswers < roundsCount) {
     const number = Math.floor(Math.random() * 100) + 1;
-    const correctAnswer = isPrime(number) ? "yes" : "no";
+    const correctAnswer = isPrime(number) ? 'yes' : 'no';
 
     console.log(`Question: ${number}`);
-    const userAnswer = readlineSync
-      .question("Your answer: ")
-      .toLowerCase()
-      .trim();
+    const userAnswer = readlineSync.question('Your answer: ').toLowerCase().trim();
 
     if (!checkAnswer(userAnswer, correctAnswer, userName)) {
       return; // Завершаем игру при ошибке

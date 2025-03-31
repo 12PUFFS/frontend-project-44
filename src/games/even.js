@@ -1,8 +1,8 @@
-import readlineSync from "readline-sync";
-import sayHi from "../cli.js";
-import { getName } from "../index.js";
-import { getRandomNumber } from "../index.js";
-import { checkAnswer } from "../index.js";
+import readlineSync from 'readline-sync';
+import sayHi from '../cli.js';
+import { getName } from '../index.js';
+import { getRandomNumber } from '../index.js';
+import { checkAnswer } from '../index.js';
 
 sayHi();
 const playEvenGame = () => {
@@ -14,9 +14,9 @@ const playEvenGame = () => {
     const number = getRandomNumber(1, 100);
     console.log(`Question: ${number}`);
 
-    const userAnswer = readlineSync.question("Your answer: ").toLowerCase();
+    const userAnswer = readlineSync.question('Your answer: ').toLowerCase();
     const isEven = number % 2 === 0;
-    const correctAnswer = isEven ? "yes" : "no";
+    const correctAnswer = isEven ? 'yes' : 'no';
 
     if (!checkAnswer(userAnswer, correctAnswer, userName)) {
       return; // Завершаем игру при ошибке

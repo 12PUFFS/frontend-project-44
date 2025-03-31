@@ -1,7 +1,7 @@
-import readlineSync from "readline-sync";
-import sayHi from "../cli.js";
-import { getName } from "../index.js";
-import { checkAnswer } from "../index.js";
+import readlineSync from 'readline-sync';
+import sayHi from '../cli.js';
+import { getName } from '../index.js';
+import { checkAnswer } from '../index.js';
 
 sayHi();
 const userName = getName();
@@ -26,12 +26,12 @@ const playProgressionGame = () => {
 
     const hiddenIndex = Math.floor(Math.random() * (length - 2)) + 1; // Not first or last
     const correctAnswer = progression[hiddenIndex];
-    progression[hiddenIndex] = "..";
-    const question = progression.join(" ");
-    console.log("What number is missing in the progression?");
+    progression[hiddenIndex] = '..';
+    const question = progression.join(' ');
+    console.log('What number is missing in the progression?');
 
     console.log(`Question: ${question}`);
-    const userAnswer = Number(readlineSync.question("Your answer: "));
+    const userAnswer = Number(readlineSync.question('Your answer: '));
 
     if (!checkAnswer(userAnswer, correctAnswer, userName)) {
       return; // Завершаем игру при ошибке

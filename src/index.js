@@ -1,10 +1,9 @@
-import readlineSync from "readline-sync";
+import readlineSync from 'readline-sync';
 
-export const getRandomNumber = (min, max) =>
-  Math.floor(Math.random() * (max - min + 1)) + min;
+export const getRandomNumber = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 
 export const getName = () => {
-  const name = readlineSync.question("May I have your name? ");
+  const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}!`);
   return name;
 };
@@ -23,13 +22,11 @@ export const checkAnswer = (userAnswer, correctAnswer, userName) => {
   const isCorrect = normalizedUser === normalizedCorrect;
 
   if (isCorrect) {
-    console.log("Correct!");
+    console.log('Correct!');
     return true;
   }
 
-  console.log(
-    `'${normalizedUser}' is wrong answer ;(. Correct answer was '${normalizedCorrect}'.`,
-  );
+  console.log(`'${normalizedUser}' is wrong answer ;(. Correct answer was '${normalizedCorrect}'.`);
   console.log(`Let's try again, ${userName}!`);
   return false;
 };

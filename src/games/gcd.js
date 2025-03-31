@@ -1,11 +1,11 @@
-import readlineSync from "readline-sync";
-import sayHi from "../cli.js";
-import { getName } from "../index.js";
-import { checkAnswer } from "../index.js";
+import readlineSync from 'readline-sync';
+import sayHi from '../cli.js';
+import { getName } from '../index.js';
+import { checkAnswer } from '../index.js';
 
 sayHi();
 const userName = getName();
-console.log("Find the greatest common divisor of given numbers.");
+console.log('Find the greatest common divisor of given numbers.');
 
 const calculateGcd = (a, b) => {
   a = Math.abs(a);
@@ -24,7 +24,7 @@ const gcd = () => {
     const correctAnswer = calculateGcd(num1, num2);
 
     console.log(`Question: ${num1} ${num2}`);
-    const userAnswer = Number(readlineSync.question("Your answer: "));
+    const userAnswer = Number(readlineSync.question('Your answer: '));
 
     if (!checkAnswer(userAnswer, correctAnswer, userName)) {
       return; // Завершаем игру при ошибке
