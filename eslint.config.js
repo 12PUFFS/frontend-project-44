@@ -1,9 +1,14 @@
-import { defineConfig } from 'eslint/config';
+// eslint.config.js
+import js from '@eslint/js';  // Правильный импорт для ESLint v9+
 import globals from 'globals';
-import js from '@eslint/js';
 
-export default defineConfig([
-  { files: ['**/*.{js,mjs,cjs}'] },
-  { files: ['**/*.{js,mjs,cjs}'], languageOptions: { globals: globals.browser } },
-  { files: ['**/*.{js,mjs,cjs}'], plugins: { js }, extends: ['js/recommended'] },
-]);
+export default [
+  js.configs.recommended,  // Базовые правила ESLint
+  {
+    rules: {
+      // Ваши кастомные правила
+      "semi": ["error", "always"],
+      "quotes": ["error", "single"]
+    }
+  }
+];
