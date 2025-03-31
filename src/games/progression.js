@@ -16,7 +16,6 @@ const generateProgression = (start, step, length) => {
 const playProgressionGame = () => {
   const ROUNDS_COUNT = 3;
   let correctAnswers = 0;
-
   while (correctAnswers < ROUNDS_COUNT) {
     const start = Math.floor(Math.random() * 50) + 1;
     const step = Math.floor(Math.random() * 10) + 1;
@@ -35,7 +34,7 @@ const playProgressionGame = () => {
     if (!checkAnswer(userAnswer, correctAnswer, userName)) {
       return; // Завершаем игру при ошибке
     }
-    correctAnswers++;
+    correctAnswers += 1;
   }
 
   console.log(`Congratulations, ${userName}!`);

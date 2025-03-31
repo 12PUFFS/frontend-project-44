@@ -17,14 +17,13 @@ export default [
       },
     },
     rules: {
-      "space-in-parens": "off",
+      'space-in-parens": "off',
       'prettier/prettier': 'error',
       quotes: ['error', 'single', { avoidEscape: true }],
       semi: ['error', 'always'],
       'import/no-duplicates': 'error',
       'no-plusplus': 'off',
       'no-param-reassign': 'off',
-      
     },
   },
 ];

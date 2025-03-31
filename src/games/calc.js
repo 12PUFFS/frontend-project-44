@@ -1,6 +1,7 @@
 import readlineSync from 'readline-sync';
 import sayHi from '../cli.js';
-import { getName, checkAnswer } from '../index.js';
+import  getName  from '../index.js';
+import { checkAnswer } from '../index.js';
 
 sayHi();
 const userName = getName();
@@ -21,8 +22,7 @@ const calc = () => {
   };
 
   const ROUNDS_COUNT = 3;
-
-  for (let correctAnswers = 0; correctAnswers < ROUNDS_COUNT; ) {
+  for (let correctAnswers = 0; correctAnswers < ROUNDS_COUNT;) {
     const a = Math.floor(Math.random() * 25) + 1;
     const b = Math.floor(Math.random() * 25) + 1;
     const operators = ['+', '-', '*'];
@@ -35,7 +35,7 @@ const calc = () => {
     if (!checkAnswer(userAnswer, correctAnswer, userName)) {
       return; // Завершаем игру при ошибке
     }
-    correctAnswers++;
+    correctAnswers += 1;
   }
 
   console.log(`Congratulations, ${userName}!`);

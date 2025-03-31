@@ -18,7 +18,6 @@ const playPrimeGame = () => {
 
   const roundsCount = 3;
   let correctAnswers = 0;
-
   while (correctAnswers < roundsCount) {
     const number = Math.floor(Math.random() * 100) + 1;
     const correctAnswer = isPrime(number) ? 'yes' : 'no';
@@ -29,7 +28,7 @@ const playPrimeGame = () => {
     if (!checkAnswer(userAnswer, correctAnswer, userName)) {
       return; // Завершаем игру при ошибке
     }
-    correctAnswers++;
+    correctAnswers += 1;
   }
 
   console.log(`Congratulations, ${userName}!`);
