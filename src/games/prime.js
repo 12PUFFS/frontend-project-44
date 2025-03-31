@@ -7,7 +7,7 @@ const userName = getName();
 
 const isPrime = (number) => {
   if (number < 2) return false;
-  for (let i = 2, max = Math.sqrt(number); i <= max; i++) {
+  for (let i = 2, max = Math.sqrt(number); i <= max; i += 1) {
     if (number % i === 0) return false;
   }
   return true;
