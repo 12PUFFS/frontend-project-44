@@ -3,8 +3,8 @@ import  sayHi  from '../cli.js';
 import { getName } from '../index.js';
 import { checkAnswer } from '../index.js';
 
-sayHi()
-const userName = getName()
+sayHi();
+const userName = getName();
 
 
 

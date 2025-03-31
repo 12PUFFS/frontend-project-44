@@ -3,9 +3,9 @@ import  sayHi  from '../cli.js';
 import { getName } from '../index.js';
 import { checkAnswer } from '../index.js';
 
-sayHi()
-const userName = getName()
-console.log("Find the greatest common divisor of given numbers.");
+sayHi();
+const userName = getName();
+console.log('Find the greatest common divisor of given numbers.');
 
 const calculateGcd = (a, b) => {
     a = Math.abs(a);
@@ -40,4 +40,4 @@ const gcd = () => {
                 console.log(`Congratulations, ${userName}!`);
 };
 
-export default gcd
+export default gcd;

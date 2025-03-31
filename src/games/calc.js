@@ -41,6 +41,6 @@ const calc = () => {
         };
         
         console.log(`Congratulations, ${userName}!`);
-}
+};
 
-export default calc
+export default calc;

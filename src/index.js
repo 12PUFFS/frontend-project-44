@@ -12,8 +12,8 @@ export const getName = () => {
 export const getQuestion = () => {
   const number = Math.floor(Math.random() * 100);
   console.log(`Question: ${number}`);
-  return number
-}
+  return number;
+};
 
 export const checkAnswer = (userAnswer, correctAnswer, userName) => {
   // Нормализация ответов: преобразуем в строку и удаляем лишние пробелы

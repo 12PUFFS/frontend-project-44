@@ -4,7 +4,7 @@ import { getName } from '../index.js';
 import { getRandomNumber } from '../index.js';
 import { checkAnswer } from '../index.js';
 
-sayHi()
+sayHi();
 const playEvenGame = () => {
   
   
@@ -30,6 +30,6 @@ const playEvenGame = () => {
           };
           
             console.log(`Congratulations, ${userName}!`);
-}
+};
 
 export default playEvenGame;

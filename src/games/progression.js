@@ -3,8 +3,8 @@ import  sayHi  from '../cli.js';
 import { getName } from '../index.js';
 import { checkAnswer } from '../index.js';
 
-sayHi()
-const userName = getName()
+sayHi();
+const userName = getName();
 
 
 const generateProgression = (start, step, length) => {
@@ -29,7 +29,7 @@ const generateProgression = (start, step, length) => {
       const correctAnswer = progression[hiddenIndex];
       progression[hiddenIndex] = '..';
       const question = progression.join(' ');
-      console.log("What number is missing in the progression?");
+      console.log('What number is missing in the progression?');
       
       console.log(`Question: ${question}`);
       const userAnswer = Number(readlineSync.question('Your answer: '));
@@ -46,5 +46,5 @@ const generateProgression = (start, step, length) => {
           console.log(`Congratulations, ${userName}!`);
   };
 
-  export default playProgressionGame
+  export default playProgressionGame;
   
