@@ -1,8 +1,6 @@
 import readlineSync from 'readline-sync';
 import sayHi from '../cli.js';
-import { getName } from '../index.js';
-import { getRandomNumber } from '../index.js';
-import { checkAnswer } from '../index.js';
+import { getName, getRandomNumber, checkAnswer } from '../index.js';
 
 sayHi();
 const playEvenGame = () => {
