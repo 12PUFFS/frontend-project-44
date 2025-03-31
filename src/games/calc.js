@@ -2,11 +2,10 @@ import readlineSync from 'readline-sync';
 import  sayHi  from '../cli.js';
 import { getName } from '../index.js';
 
-
+sayHi();
+const userName = getName();
 const calc = () => {
-    sayHi();
-    const userName = getName();
-    console.log("What is the result of the expression?");
+    console.log('What is the result of the expression?');
 
     const calculate = (a, b, operator) => {
         switch (operator) {

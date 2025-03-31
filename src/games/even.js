@@ -1,6 +1,4 @@
 import readlineSync from 'readline-sync';
-
-
 import sayHi from '../cli.js';
 import { getName } from '../index.js';
 import { getRandomNumber } from '../index.js';
