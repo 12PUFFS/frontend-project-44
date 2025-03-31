@@ -1,13 +1,11 @@
-// eslint.config.js
-import js from '@eslint/js';  // Правильный импорт для ESLint v9+
+import js from '@eslint/js';
 
 export default [
-  js.configs.recommended,  // Базовые правила ESLint
+  js.configs.recommended,
   {
     rules: {
-      // Ваши кастомные правила
-      'semi': ['error", "always'],
-      'quotes': ['error", "single']
+      semi: ['error", "always'],
+      quotes: ['error", "single'],
     }
   }
 ];
