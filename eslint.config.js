@@ -15,15 +15,22 @@ export default [
         ...globals.node,
         console: 'readonly',
       },
+      parserOptions: {
+        ecmaVersion: 'latest',
+        sourceType: 'module',
+      },
     },
     rules: {
-      'space-in-parens": "off',
+      'space-in-parens': 'off',
       'prettier/prettier': 'error',
       quotes: ['error', 'single', { avoidEscape: true }],
       semi: ['error', 'always'],
       'import/no-duplicates': 'error',
       'no-plusplus': 'off',
       'no-param-reassign': 'off',
+      'no-multi-spaces': ['error', { ignoreEOLComments: true }],
+      'object-curly-spacing': ['error', 'always'],
+      'no-trailing-spaces': 'error',
     },
   },
 ];
