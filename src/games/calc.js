@@ -21,7 +21,7 @@ const calc = () => {
   };
 
   const ROUNDS_COUNT = 3;
-  for (let correctAnswers = 0; correctAnswers < ROUNDS_COUNT; ) {
+  for (let correctAnswers = 0; correctAnswers < ROUNDS_COUNT;) {
     const a = Math.floor(Math.random() * 25) + 1;
     const b = Math.floor(Math.random() * 25) + 1;
     const operators = ['+', '-', '*'];

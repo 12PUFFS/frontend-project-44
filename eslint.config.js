@@ -13,24 +13,41 @@ export default [
     languageOptions: {
       globals: {
         ...globals.node,
+        ...globals.browser,
         console: 'readonly',
       },
       parserOptions: {
-        ecmaVersion: 'latest',
+        ecmaVersion: 2022,
         sourceType: 'module',
       },
     },
     rules: {
-      'space-in-parens': 'off',
-      'prettier/prettier': 'error',
-      quotes: ['error', 'single', { avoidEscape: true }],
-      semi: ['error', 'always'],
-      'import/no-duplicates': 'error',
-      'no-plusplus': 'off',
-      'no-param-reassign': 'off',
-      'no-multi-spaces': ['error', { ignoreEOLComments: true }],
+      // Стилевые правила
+      'space-in-parens': ['error', 'never'],
       'object-curly-spacing': ['error', 'always'],
       'no-trailing-spaces': 'error',
+      'no-multi-spaces': ['error', { ignoreEOLComments: true }],
+      quotes: ['error', 'single', { avoidEscape: true }],
+      semi: ['error', 'always'],
+
+      // Правила для чистоты кода
+      'import/no-duplicates': 'error',
+
+      // Отключенные правила
+      'no-plusplus': 'off',
+      'no-param-reassign': 'off',
+
+      // Интеграция с Prettier
+      'prettier/prettier': [
+        'error',
+        {
+          printWidth: 100,
+          singleQuote: true,
+          semi: true,
+          trailingComma: 'es5',
+          bracketSpacing: true,
+        },
+      ],
     },
   },
 ];

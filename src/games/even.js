@@ -7,7 +7,7 @@ const playEvenGame = () => {
   const userName = getName();
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
   const ROUNDS_COUNT = 3;
-  for (let correctAnswers = 0; correctAnswers < ROUNDS_COUNT; ) {
+  for (let correctAnswers = 0; correctAnswers < ROUNDS_COUNT;) {
     const number = getRandomNumber(1, 100);
     console.log(`Question: ${number}`);
 
