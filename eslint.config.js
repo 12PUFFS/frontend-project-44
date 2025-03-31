@@ -1,19 +1,18 @@
 import js from '@eslint/js';
+import globals from 'globals';
 
 export default [
   js.configs.recommended,
   {
     languageOptions: {
       globals: {
-        console: 'readonly', // Явно разрешаем console
-      },
-      env: {
-        node: true, // Включаем глобальные переменные Node.js
+        ...globals.browser, // или ...globals.node для Node.js
+        console: 'readonly' // явно разрешаем console
       }
     },
     rules: {
       semi: ['error', 'always'],
-      quotes: ['error', 'single'],
-    },
-  },
+      quotes: ['error', 'single']
+    }
+  }
 ];
