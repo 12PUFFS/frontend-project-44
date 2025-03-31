@@ -4,5 +4,5 @@
 import { getName } from '../src/index.js';
 import sayHi from '../src/cli.js';
 
-sayHi()
-getName()
+sayHi();
+getName();
