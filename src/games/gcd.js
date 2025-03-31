@@ -1,6 +1,7 @@
 import readlineSync from 'readline-sync';
 import  sayHi  from '../cli.js';
 import { getName } from '../index.js';
+import { checkAnswer } from '../index.js';
 
 sayHi()
 const userName = getName()
@@ -27,17 +28,16 @@ const gcd = () => {
         console.log(`Question: ${num1} ${num2}`); 
         const userAnswer = Number(readlineSync.question('Your answer: '));
 
-        if (userAnswer === correctAnswer) {
-            console.log('Correct!');
-            correctAnswers++;
-        } else {
-            console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
-            console.log(`Let's try again, ${userName}!`);
-            return;
-        }
-    }
-
-    console.log(`Congratulations, ${userName}!`);
+          if (!checkAnswer(userAnswer, correctAnswer, userName)) {
+                    return; // Завершаем игру при ошибке
+                  }
+                  correctAnswers++;
+              
+                  
+                  
+                };
+                
+                console.log(`Congratulations, ${userName}!`);
 };
 
 export default gcd

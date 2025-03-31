@@ -1,6 +1,7 @@
 import readlineSync from 'readline-sync';
 import  sayHi  from '../cli.js';
 import { getName } from '../index.js';
+import { checkAnswer } from '../index.js';
 
 sayHi();
 const userName = getName();
@@ -18,7 +19,7 @@ const calc = () => {
 
     const ROUNDS_COUNT = 3;
 
-    for (let correctAnswers = 0; correctAnswers < ROUNDS_COUNT; correctAnswers++) {
+    for (let correctAnswers = 0; correctAnswers < ROUNDS_COUNT;) {
         const a = Math.floor(Math.random() * 25) + 1;
         const b = Math.floor(Math.random() * 25) + 1;
         const operators = ['+', '-', '*'];
@@ -28,17 +29,18 @@ const calc = () => {
         const userAnswer = readlineSync.question('Your answer: ');
         const correctAnswer = calculate(a, b, operator);
 
-        if (Number(userAnswer) !== correctAnswer) {
-            console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
-            console.log(`Let's try again, ${userName}!`);
-            return; // Теперь это валидный return внутри функции
-        }
-        console.log('Correct!');
-    }
+        
 
-    console.log(`Congratulations, ${userName}!`);
-};
-
+        if (!checkAnswer(userAnswer, correctAnswer, userName)) {
+            return; // Завершаем игру при ошибке
+          }
+          correctAnswers++;
+      
+          
+          
+        };
+        
+        console.log(`Congratulations, ${userName}!`);
+}
 
 export default calc
-

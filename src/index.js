@@ -14,3 +14,21 @@ export const getQuestion = () => {
   console.log(`Question: ${number}`);
   return number
 }
+
+export const checkAnswer = (userAnswer, correctAnswer, userName) => {
+  // Нормализация ответов: преобразуем в строку и удаляем лишние пробелы
+  const normalizedUser = String(userAnswer).trim();
+  const normalizedCorrect = String(correctAnswer).trim();
+  
+  const isCorrect = normalizedUser === normalizedCorrect;
+
+  if (isCorrect) {
+    console.log('Correct!');
+    return true;
+  }
+
+  console.log(`'${normalizedUser}' is wrong answer ;(. Correct answer was '${normalizedCorrect}'.`);
+  console.log(`Let's try again, ${userName}!`);
+  return false;
+};
+

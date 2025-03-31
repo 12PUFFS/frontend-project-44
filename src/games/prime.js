@@ -1,6 +1,7 @@
 import readlineSync from 'readline-sync';
 import  sayHi  from '../cli.js';
 import { getName } from '../index.js';
+import { checkAnswer } from '../index.js';
 
 sayHi()
 const userName = getName()
@@ -31,17 +32,16 @@ const isPrime = (number) => {
       console.log(`Question: ${number}`);
       const userAnswer = readlineSync.question('Your answer: ').toLowerCase().trim();
   
-      if (userAnswer === correctAnswer) {
-        console.log('Correct!');
-        correctAnswers += 1;
-      } else {
-        console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
-        console.log(`Let's try again, ${userName}!`);
-        return;
-      }
-    }
-  
-    console.log(`Congratulations, ${userName}!`);
+      if (!checkAnswer(userAnswer, correctAnswer, userName)) {
+                return; // Завершаем игру при ошибке
+              }
+              correctAnswers++;
+          
+              
+              
+            };
+            
+            console.log(`Congratulations, ${userName}!`);
   };
   
   export default playPrimeGame;
