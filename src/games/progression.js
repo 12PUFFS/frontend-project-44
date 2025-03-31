@@ -28,7 +28,8 @@ const generateProgression = (start, step, length) => {
       const correctAnswer = progression[hiddenIndex];
       progression[hiddenIndex] = '..';
       const question = progression.join(' ');
-  
+      console.log("What number is missing in the progression?");
+      
       console.log(`Question: ${question}`);
       const userAnswer = Number(readlineSync.question('Your answer: '));
   
