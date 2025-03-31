@@ -1,7 +1,6 @@
 import readlineSync from 'readline-sync';
 import sayHi from '../cli.js';
-import { getName } from '../index.js';
-import { checkAnswer } from '../index.js';
+import { getName, checkAnswer } from '../index.js';
 
 sayHi();
 const userName = getName();
@@ -10,11 +9,11 @@ console.log('Find the greatest common divisor of given numbers.');
 const calculateGcd = (a, b) => {
   const absA = Math.abs(a);
   const absB = Math.abs(b);
-  
+
   if (absB === 0) {
     return absA;
   }
-  
+
   return calculateGcd(absB, absA % absB);
 };
 
